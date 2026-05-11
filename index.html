@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра Лабиринт</title>
+    <link rel="stylesheet" href="maze-style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🎮 ЛАБИРИНТ 🎮</h1>
+            <div class="stats">
+                <div class="stat">❤️ Жизни: <span id="lives">3</span></div>
+                <div class="stat">⭐ Очки: <span id="score">0</span></div>
+                <div class="stat">📍 Уровень: <span id="level">1</span></div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div class="controls">
+            <p>⬅️ ➡️ ⬆️ ⬇️ или WASD - движение</p>
+            <p>ПРОБЕЛ - новая игра | Собери 💎 и избегай врагов 👾</p>
+        </div>
+        
+        <div id="gameOver" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="gameOverTitle">Игра окончена!</h2>
+                <p id="gameOverMessage"></p>
+                <button onclick="location.reload()">Играть снова</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="maze-game.js"></script>
+</body>
+</html>
