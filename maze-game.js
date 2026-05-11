@@ -77,29 +77,6 @@ window.addEventListener('keyup', (e) => {
     keys[e.key] = false;
 });
 
-let gems = [];
-let enemies = [];
-let gameState = GAME_PLAYING;
-let lives = 3;
-let score = 0;
-let level = 1;
-let invulnerable = 0;
-
-// Keyboard handling
-const keys = {};
-window.addEventListener('keydown', (e) => {
-    keys[e.key] = true;
-    if (e.key === ' ') {
-        e.preventDefault();
-        if (gameState !== GAME_PLAYING) {
-            location.reload();
-        }
-    }
-});
-window.addEventListener('keyup', (e) => {
-    keys[e.key] = false;
-});
-
 // Initialize game
 function init() {
     player.x = 1.5;
