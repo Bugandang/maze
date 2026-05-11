@@ -117,7 +117,7 @@ function spawnEnemies() {
         enemies.push({
             x: x + 0.5,
             y: y + 0.5,
-            speed: 0.5 + level * 0.15
+            speed: 0.2 + level * 0.05
         });
     }
 }
